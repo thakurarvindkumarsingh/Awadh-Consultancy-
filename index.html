@@ -3,119 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awadh Consultancy | डिजिटल एवं नागरिक सेवा केंद्र</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Awadh Consultancy | डिजिटल एवं नागरिक सेवा पोर्टल</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons for clean UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="navbar">
-        <div class="logo">Awadh <span>Consultancy</span></div>
-        <nav id="nav-menu">
-            <a href="#home" class="active">होम</a>
-            <a href="#services">सेवाएं</a>
-            <a href="#downloads">फॉर्म डाउनलोड</a>
-            <a href="#contact">संपर्क करें</a>
-        </nav>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
+    <!-- 1. Top Header -->
+    <header class="top-header">
+        <div class="logo-box">
+            <i class="fa-solid fa-house-laptop logo-icon"></i>
+            <div>
+                <h1>Awadh Consultancy</h1>
+                <p>डिजिटल नागरिक सेवा एवं सूचना पोर्टल</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="night-mode-btn" id="nightModeBtn">
+                <i class="fa-solid fa-moon"></i> Night Mode
+            </button>
+        </div>
     </header>
 
-    <!-- Announcement Bar -->
-    <section class="ticker">
-        <span>📢 सूचना: आय, जाति, निवास प्रमाण पत्र, पैन कार्ड एवं ऑनलाइन फॉर्म भरने की सुविधा उपलब्ध है।</span>
-    </section>
+    <!-- 2. Menu Navigation Bar -->
+    <div class="menu-bar">
+        <div class="menu-title">
+            <i class="fa-regular fa-clipboard"></i> नेविगेशन (Menu)
+        </div>
+        <button class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i> मेनू</button>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h1>अवध कंसल्टेंसी (Awadh Consultancy)</h1>
-        <p>आपकी सभी ऑनलाइन, सरकारी एवं नागरिक सेवाओं का एक मात्र केंद्र</p>
-        <input type="text" id="searchBar" placeholder="सेवा खोजें (उदा. आय प्रमाण पत्र, पैन कार्ड, खतौनी)...">
-    </section>
-
-    <!-- Services Section -->
-    <main class="container" id="services">
-        <h2>हमारी प्रमुख सेवाएं</h2>
-        <div class="card-grid" id="cardContainer">
+    <!-- 3. Welcome & Search Card -->
+    <div class="main-container">
+        <div class="card welcome-card">
+            <div class="welcome-header">
+                <i class="fa-solid fa-building-columns welcome-icon"></i>
+                <div>
+                    <h2>नमस्ते !</h2>
+                    <p class="sub-text">अवध कंसल्टेंसी डिजिटल सेवा पोर्टल</p>
+                </div>
+            </div>
             
-            <div class="card" data-title="ई-डिस्ट्रिक्ट आय जाति निवास प्रमाण पत्र">
-                <div class="icon">📜</div>
-                <h3>ई-डिस्ट्रिक्ट सेवाएं</h3>
-                <p>आय, जाति, निवास, दिव्यांग एवं हैसियत प्रमाण पत्र आवेदन।</p>
-                <a href="#contact" class="btn">आवेदन करवाएं</a>
+            <div class="meta-info">
+                <div>📅 <strong>LAST UPDATED:</strong> August 2026</div>
+                <div>🔔 <strong>LATEST:</strong> ई-डिस्ट्रिक्ट एवं खतौनी सेवाएं लाइव</div>
             </div>
 
-            <div class="card" data-title="पैन कार्ड नया सुधार uti nsdl pan card">
-                <div class="icon">💳</div>
-                <h3>पैन कार्ड सेवा</h3>
-                <p>नया पैन कार्ड बनाना एवं पुराने पैन कार्ड में नाम/पता सुधार।</p>
-                <a href="#contact" class="btn">आवेदन करवाएं</a>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="सेवाएँ, टूल्स, फॉर्म खोजें (जैसे- e-District, Ration)...">
             </div>
+        </div>
 
-            <div class="card" data-title="राशन कार्ड संशोधन नया लिस्ट">
-                <div class="icon">🌾</div>
-                <h3>राशन कार्ड सेवाएं</h3>
-                <p>राशन कार्ड में यूनिट जोड़ना/हटाना एवं पात्रता सूची जांच।</p>
-                <a href="#contact" class="btn">विवरण देखें</a>
-            </div>
+        <!-- 4. Useful Govt Websites (4-Column Grid) -->
+        <div class="section-title">
+            <span>उपयोगी गवर्नमेंट वेबसाइट्स (Official Portals)</span>
+        </div>
 
-            <div class="card" data-title="भूलेख खतौनी नकल भू नक्शा up bhulekh">
-                <div class="icon">🗺️</div>
-                <h3>भूलेख / खतौनी</h3>
-                <p>खतौनी नकल, भू-नक्शा एवं गाटा संख्या विवरण जांच।</p>
-                <a href="#contact" class="btn">चेक करें</a>
-            </div>
+        <div class="portal-grid" id="portalGrid">
+            
+            <!-- e-District (UP) -->
+            <a href="https://edistrict.up.gov.in" target="_blank" class="grid-card" data-title="e-District (UP) आय जाति निवास प्रमाण पत्र">
+                <div class="icon-circle border-orange">
+                    <i class="fa-solid fa-file-invoice" style="color: #e67e22;"></i>
+                </div>
+                <span>e-District (UP)</span>
+            </a>
 
-            <div class="card" data-title="पेंशन वृद्धा विधवा दिव्यांग sspy pension">
-                <div class="icon">🪙</div>
-                <h3>पेंशन ऑनलाइन</h3>
-                <p>वृद्धावस्था, विधवा एवं दिव्यांग पेंशन का नया आवेदन व स्टेटस।</p>
-                <a href="#contact" class="btn">आवेदन करवाएं</a>
-            </div>
+            <!-- CSC / Sahaj -->
+            <a href="https://digitalseva.csc.gov.in" target="_blank" class="grid-card" data-title="CSC Sahaj Seva Portal">
+                <div class="icon-circle border-yellow">
+                    <i class="fa-solid fa-laptop-code" style="color: #f1c40f;"></i>
+                </div>
+                <span>CSC / Sahaj</span>
+            </a>
 
-            <div class="card" data-title="सरकारी नौकरी फॉर्म admit card result">
-                <div class="icon">💼</div>
-                <h3>ऑनलाइन फॉर्म</h3>
-                <p>सभी प्रतियोगी परीक्षाओं के ऑनलाइन आवेदन एवं एडमिट कार्ड।</p>
-                <a href="#contact" class="btn">फॉर्म भरवाएं</a>
-            </div>
+            <!-- Pension UP -->
+            <a href="https://sspy-up.gov.in" target="_blank" class="grid-card" data-title="Pension UP vridha vidhwa">
+                <div class="icon-circle border-blue">
+                    <i class="fa-solid fa-user-shield" style="color: #3498db;"></i>
+                </div>
+                <span>Pension (UP)</span>
+            </a>
+
+            <!-- Ration Card -->
+            <a href="https://fcs.up.gov.in" target="_blank" class="grid-card" data-title="Ration Card fcs पात्रता सूची">
+                <div class="icon-circle border-gold">
+                    <i class="fa-solid fa-wheat-awn" style="color: #d4ac0d;"></i>
+                </div>
+                <span>Ration Card</span>
+            </a>
+
+            <!-- Voter / NVSP -->
+            <a href="https://voters.eci.gov.in" target="_blank" class="grid-card" data-title="Voter ID NVSP निर्वाचन">
+                <div class="icon-circle border-indigo">
+                    <i class="fa-solid fa-id-card-clip" style="color: #5c6bc0;"></i>
+                </div>
+                <span>Voter / NVSP</span>
+            </a>
+
+            <!-- Aadhaar (UIDAI) -->
+            <a href="https://myaadhaar.uidai.gov.in" target="_blank" class="grid-card" data-title="Aadhaar UIDAI download update">
+                <div class="icon-circle border-cyan">
+                    <i class="fa-solid fa-fingerprint" style="color: #00acc1;"></i>
+                </div>
+                <span>Aadhaar (UIDAI)</span>
+            </a>
+
+            <!-- UP Bhulekh -->
+            <a href="https://upbhulekh.gov.in" target="_blank" class="grid-card" data-title="UP Bhulekh khatauni khata nakal">
+                <div class="icon-circle border-teal">
+                    <i class="fa-solid fa-map-location-dot" style="color: #00897b;"></i>
+                </div>
+                <span>UP Bhulekh</span>
+            </a>
+
+            <!-- PM-Kisan -->
+            <a href="https://pmkisan.gov.in" target="_blank" class="grid-card" data-title="PM-Kisan samman nidhi kyc">
+                <div class="icon-circle border-green">
+                    <i class="fa-solid fa-seedling" style="color: #2ecc71;"></i>
+                </div>
+                <span>PM-Kisan</span>
+            </a>
+
+            <!-- Birth / Death -->
+            <a href="https://crsorgi.gov.in" target="_blank" class="grid-card" data-title="Birth Death Certificate janam praman patra">
+                <div class="icon-circle border-navy">
+                    <i class="fa-solid fa-baby" style="color: #1e3799;"></i>
+                </div>
+                <span>Birth / Death</span>
+            </a>
+
+            <!-- UPPCL (Bijli) -->
+            <a href="https://www.upenergy.in" target="_blank" class="grid-card" data-title="UPPCL Bijli Bill payment electricity">
+                <div class="icon-circle border-purple">
+                    <i class="fa-solid fa-bolt" style="color: #8e44ad;"></i>
+                </div>
+                <span>UPPCL (Bijli)</span>
+            </a>
 
         </div>
-    </main>
 
-    <!-- Downloads Section -->
-    <section class="container" id="downloads">
-        <h2>महत्वपूर्ण फॉर्म एवं प्रारूप (PDF)</h2>
-        <ul class="download-list">
-            <li>
-                <span>स्वप्रमाणित घोषणा पत्र (Self Declaration Format)</span>
-                <a href="assets/docs/declaration.pdf" download class="btn-download">डाउनलोड</a>
-            </li>
-            <li>
-                <span>परिवार रजिस्टर नकल हेतु प्रार्थना पत्र</span>
-                <a href="assets/docs/parivar-register.pdf" download class="btn-download">डाउनलोड</a>
-            </li>
-            <li>
-                <span>आय/जाति प्रमाण पत्र ऑफलाइन फॉर्म</span>
-                <a href="assets/docs/caste-income-form.pdf" download class="btn-download">डाउनलोड</a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="container contact-section" id="contact">
-        <h2>संपर्क एवं सहायता</h2>
-        <div class="contact-box">
-            <p><strong>स्थान:</strong> अवध कंसल्टेंसी, उत्तर प्रदेश</p>
-            <p><strong>कॉल / व्हाट्सएप:</strong> +91 98765 43210</p>
-            <p><strong>कार्य समय:</strong> सुबह 09:00 AM से शाम 07:00 PM तक</p>
-            <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">💬 व्हाट्सएप पर मैसेज करें</a>
+        <!-- 5. Smart Tools Section -->
+        <div class="section-heading-box">
+            <h3>🛠️ स्मार्ट टूल्स (Smart Tools)</h3>
+            <p>दैनिक कार्य एवं ऑनलाइन यूटिलिटी टूल्स</p>
         </div>
-    </section>
+
+        <div class="tools-grid">
+            <a href="#" class="tool-card">
+                <div class="tool-icon-bg bg-teal">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <span>Image Tools</span>
+            </a>
+            <a href="#" class="tool-card">
+                <div class="tool-icon-bg bg-cyan">
+                    <i class="fa-solid fa-file-pdf"></i>
+                </div>
+                <span>PDF Tools</span>
+            </a>
+            <a href="#" class="tool-card">
+                <div class="tool-icon-bg bg-blue">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <span>PDF Forms</span>
+            </a>
+            <a href="#" class="tool-card">
+                <div class="tool-icon-bg bg-green">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <span>Fee Calculator</span>
+            </a>
+        </div>
+
+        <!-- 6. Important Forms (Download List) -->
+        <div class="section-heading-box">
+            <h3>📄 महत्वपूर्ण फॉर्म्स (Important Forms)</h3>
+        </div>
+
+        <div class="forms-container">
+            <div class="form-row">
+                <div class="pdf-tag">PDF</div>
+                <div class="form-info">
+                    <h4>परिवार रजिस्टर नकल फॉर्म</h4>
+                    <span>PDF Document</span>
+                </div>
+                <a href="#" class="download-button">Download</a>
+            </div>
+
+            <div class="form-row">
+                <div class="pdf-tag">PDF</div>
+                <div class="form-info">
+                    <h4>स्वघोषित प्रमाण पत्र (Self Declaration)</h4>
+                    <span>PDF Document</span>
+                </div>
+                <a href="#" class="download-button">Download</a>
+            </div>
+        </div>
+
+        <!-- 7. FAQs Section -->
+        <div class="faq-section">
+            <h3 class="faq-main-title">अक्सर पूछे जाने वाले सवाल (FAQs)</h3>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>e-District प्रमाण पत्र सत्यापन (Verification) कैसे करें?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>e-District पोर्टल पर जाकर 'प्रमाण पत्र सत्यापन' विकल्प चुनें और आवेदन क्रमांक व प्रमाण पत्र क्रमांक दर्ज करें।</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>खतौनी की नकल निकालने के लिए क्या विवरण चाहिए?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>भूलेख पोर्टल पर जाकर जनपद, तहसील, ग्राम चुनें और खाता संख्या, खसरा संख्या या खातेदार के नाम से नकल देख सकते हैं।</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 Awadh Consultancy. All Rights Reserved.</p>
+        <p>© 2026 Awadh Consultancy. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="main.js"></script>
 </body>
-</html>
+                </html>
