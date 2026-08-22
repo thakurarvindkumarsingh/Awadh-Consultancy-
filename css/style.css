@@ -2,191 +2,404 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #f8fafc;
+    color: #1e293b;
 }
 
-.navbar {
+/* 1. Header */
+.top-header {
+    background-color: #ffffff;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0f4c81;
-    padding: 15px 5%;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-.navbar .logo {
-    color: #fff;
-    font-size: 22px;
-    font-weight: bold;
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.navbar nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 15px;
+.logo-icon {
+    font-size: 32px;
+    color: #0f766e;
 }
 
-.navbar .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
+.logo-box h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f766e;
+}
+
+.logo-box p {
+    font-size: 12px;
+    color: #475569;
+}
+
+.night-mode-btn {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 2. Menu Navigation Bar */
+.menu-bar {
+    background-color: #0f766e;
+    color: #ffffff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 14px;
     cursor: pointer;
 }
 
-.ticker {
-    background: #eef2f5;
-    padding: 8px 5%;
-    border-bottom: 1px solid #ddd;
-    color: #c0392b;
-    font-weight: 500;
+/* Main Container */
+.main-container {
+    max-width: 800px;
+    margin: 16px auto;
+    padding: 0 16px;
 }
 
-.hero {
-    background: #1b6ca8;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.hero input {
-    width: 90%;
-    max-width: 500px;
-    padding: 12px 16px;
-    margin-top: 15px;
-    border-radius: 25px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.container h2 {
-    margin-bottom: 20px;
-    border-left: 4px solid #0f4c81;
-    padding-left: 10px;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-}
-
+/* 3. Welcome Card */
 .card {
-    background: #fff;
-    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.welcome-icon {
+    font-size: 28px;
+    color: #0f766e;
+}
+
+.welcome-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sub-text {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.meta-info {
+    margin-top: 14px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.search-box {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+    padding: 10px 14px;
+    gap: 10px;
+}
+
+.search-box i {
+    color: #94a3b8;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    margin: 24px 0 14px 0;
+}
+
+.section-title span {
+    color: #d97706;
+    font-size: 16px;
+    font-weight: 700;
+    background: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #fde68a;
+    display: inline-block;
+}
+
+/* 4. Portal Grid (4 Columns) */
+.portal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.card .icon {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.card p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.btn, .btn-download {
-    display: inline-block;
-    text-align: center;
-    background: #0f4c81;
-    color: #fff;
-    padding: 8px 14px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.download-list {
-    list-style: none;
-    background: #fff;
-    border-radius: 8px;
-    padding: 10px 20px;
-}
-
-.download-list li {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    justify-content: center;
+    text-decoration: none;
+    color: #1e293b;
+    gap: 10px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.download-list li:last-child {
+.grid-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+}
+
+.icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.grid-card span {
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* 5. Tools Grid */
+.section-heading-box {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.section-heading-box h3 {
+    font-size: 18px;
+    color: #0f766e;
+    font-weight: 700;
+}
+
+.section-heading-box p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.tool-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.tool-icon-bg {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.bg-teal { background-color: #e6fffa; color: #0d9488; }
+.bg-cyan { background-color: #e0f2fe; color: #0284c7; }
+.bg-blue { background-color: #eff6ff; color: #2563eb; }
+.bg-green { background-color: #f0fdf4; color: #16a34a; }
+
+/* 6. Forms Rows */
+.forms-container {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 12px;
+}
+
+.form-row:last-child {
     border-bottom: none;
 }
 
-footer {
-    background: #222;
-    color: #ccc;
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    margin-top: 50px;
-}
-/* Logo Styling */
-.navbar .logo {
-    color: #fff;
-    font-size: 22px;
+.pdf-tag {
+    background-color: #fee2e2;
+    color: #dc2626;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
-.navbar .logo span {
-    color: #f39c12; /* Golden/Orange accent */
+.form-info {
+    flex: 1;
 }
 
-/* Contact Box Styling */
-.contact-section {
-    margin-bottom: 50px;
-}
-
-.contact-box {
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.06);
-    line-height: 1.8;
-}
-
-.whatsapp-btn {
-    display: inline-block;
-    margin-top: 15px;
-    background: #25d366;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 18px;
-    border-radius: 5px;
+.form-info h4 {
+    font-size: 14px;
     font-weight: 600;
 }
-@media (max-width: 768px) {
-    .navbar .menu-toggle { display: block; }
-    .navbar nav { display: none; flex-direction: column; width: 100%; margin-top: 15px; }
-    .navbar nav.active { display: flex; }
-    .navbar nav a { margin: 10px 0; }
-    .navbar { flex-wrap: wrap; }
-  }
+
+.form-info span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.download-button {
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* 7. FAQs */
+.faq-section {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.faq-main-title {
+    font-size: 18px;
+    color: #0f766e;
+    margin-bottom: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 14px 16px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding: 0 16px 14px 16px;
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.5;
+    display: none;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    background: #fff;
+}
+
+/* Dark Mode Class */
+body.dark-mode {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+body.dark-mode .top-header,
+body.dark-mode .card,
+body.dark-mode .grid-card,
+body.dark-mode .tool-card,
+body.dark-mode .forms-container,
+body.dark-mode .faq-item,
+body.dark-mode footer {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+body.dark-mode .grid-card span,
+body.dark-mode .faq-question {
+    color: #f8fafc;
+}
+body.dark-mode .search-box {
+    background-color: #0f172a;
+    border-color: #334155;
+}
+body.dark-mode .search-box input {
+    color: #fff;
+}
