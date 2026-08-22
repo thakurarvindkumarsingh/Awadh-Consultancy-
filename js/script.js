@@ -36,3 +36,11 @@ const nightBtn = document.getElementById('nightModeBtn');
 nightBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
+
+const menuToggle = document.getElementById('menuToggle');
+const sideMenu = document.getElementById('sideMenu');
+const overlay = document.getElementById('overlay');
+const closeMenu = document.getElementById('closeMenu');
+
+menuToggle.onclick = () => { sideMenu.classList.add('open'); overlay.classList.add('open'); };
+closeMenu.onclick = overlay.onclick = () => { sideMenu.classList.remove('open'); overlay.classList.remove('open'); };
