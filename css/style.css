@@ -1191,3 +1191,48 @@ input{
     background:var(--secondary);
     transform:translateY(-5px);
 }
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.hidden-card{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:.7s ease;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* Smooth Fade */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-content,
+.hero-image{
+
+    animation:fadeUp .9s ease;
+
+}
