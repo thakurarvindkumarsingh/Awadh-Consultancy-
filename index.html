@@ -1,251 +1,710 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
+
 <head>
+    <!-- ========================= -->
+    <!-- Basic SEO -->
+    <!-- ========================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awadh Consultancy | डिजिटल एवं नागरिक सेवा पोर्टल</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- FontAwesome Icons for clean UI -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>GP Sahayak Pro | Government Services, PDF Library & Smart Tools</title>
+
+    <meta name="description"
+        content="GP Sahayak Pro is a complete Panchayat & Government Service Portal with Government Links, PDF Library, Smart Tools, Latest Orders and Helpful Articles.">
+
+    <meta name="keywords"
+        content="GP Sahayak, Panchayat Sahayak, Government Links, eGram Swaraj, PM Kisan, PDF Library, Salary Calculator">
+
+    <meta name="author" content="Arvind Kumar Singh">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
+
 <body>
 
-    <!-- 1. Top Header -->
-    <header class="top-header">
-        <div class="logo-box">
-            <i class="fa-solid fa-house-laptop logo-icon"></i>
-            <div>
-                <h1>Awadh Consultancy</h1>
-                <p>डिजिटल नागरिक सेवा एवं सूचना पोर्टल</p>
+    <!-- ======================================== -->
+    <!-- LOADER -->
+    <!-- ======================================== -->
+
+    <div id="loader">
+        <div class="loader-circle"></div>
+        <h2>GP Sahayak Pro</h2>
+        <p>Loading Government Services...</p>
+    </div>
+
+    <!-- ======================================== -->
+    <!-- HEADER -->
+    <!-- ======================================== -->
+
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h2>GP Sahayak Pro</h2>
+                    <span>Government Portal</span>
+                </div>
+
+            </a>
+
+            <!-- Desktop Menu -->
+
+            <ul class="nav-menu">
+
+                <li><a href="index.html" class="active">Home</a></li>
+
+                <li><a href="pages/government-links.html">Gov Links</a></li>
+
+                <li><a href="pages/tools.html">Tools</a></li>
+
+                <li><a href="pages/pdf-library.html">PDF Library</a></li>
+
+                <li><a href="pages/blog.html">Blog</a></li>
+
+                <li><a href="pages/notices.html">Notices</a></li>
+
+            </ul>
+
+            <!-- Right Icons -->
+
+            <div class="nav-actions">
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button id="theme-toggle" class="icon-btn">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
             </div>
-        </div>
-        <div class="header-actions">
-            <button class="night-mode-btn" id="nightModeBtn">
-                <i class="fa-solid fa-moon"></i> Night Mode
-            </button>
-        </div>
+
+        </nav>
+
     </header>
 
-    <!-- 2. Menu Navigation Bar -->
-    <div class="menu-bar">
-        <div class="menu-title">
-            <i class="fa-regular fa-clipboard"></i> नेविगेशन (Menu)
-        </div>
-        <button class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i> मेनू</button>
-    </div>
-    <div class="side-menu" id="sideMenu">
-    <div class="menu-header">
-        <h3>अवध कंसल्टेंसी मेनू</h3>
-        <button id="closeMenu">✕</button>
-    </div>
-    <ul>
-        <li><a href="#portalGrid">सरकारी पोर्टल्स</a></li>
-        <li><a href="#smartTools">स्मार्ट टूल्स</a></li>
-        <li><a href="#forms">फॉर्म्स डाउनलोड</a></li>
-        <li><a href="tel:+919876543210">हेल्पलाइन संपर्क</a></li>
-    </ul>
-</div>
-<div class="overlay" id="overlay"></div>
+    <!-- ======================================== -->
+    <!-- NEWS TICKER -->
+    <!-- ======================================== -->
 
-    <!-- 3. Welcome & Search Card -->
-    <div class="main-container">
-        <div class="card welcome-card">
-            <div class="welcome-header">
-                <i class="fa-solid fa-building-columns welcome-icon"></i>
-                <div>
-                    <h2>नमस्ते !</h2>
-                    <p class="sub-text">अवध कंसल्टेंसी डिजिटल सेवा पोर्टल</p>
+    <section class="ticker">
+
+        <div class="ticker-label">
+            <i class="fa-solid fa-bullhorn"></i>
+            Latest Updates
+        </div>
+
+        <div class="ticker-content">
+
+            <marquee scrollamount="5">
+
+                📢 PM Kisan Registration Started • Gram Panchayat Salary Order Uploaded • New Government Circular Available • eGram Swaraj Login Guide Added • PDF Library Updated.
+
+            </marquee>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- HERO SECTION -->
+    <!-- ======================================== -->
+
+    <section class="hero">
+
+        <div class="container hero-grid">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    🇮🇳 Trusted Government Information Portal
+                </span>
+
+                <h1>
+                    Your Complete
+                    <span>Government Service Portal</span>
+                </h1>
+
+                <p>
+                    Access Government Links, Download Important PDFs,
+                    Use Smart Tools, Read Latest Notices and Helpful Articles —
+                    all in one place.
+                </p>
+
+                <!-- Search -->
+
+                <div class="hero-search">
+
+                    <input type="text"
+                        placeholder="Search Government Services, PDFs, Blogs...">
+
+                    <button>
+                        <i class="fa-solid fa-search"></i>
+                    </button>
+
                 </div>
+
+                <!-- Hero Buttons -->
+
+                <div class="hero-buttons">
+
+                    <a href="pages/government-links.html" class="btn primary">
+                        Government Links
+                    </a>
+
+                    <a href="pages/pdf-library.html" class="btn secondary">
+                        PDF Library
+                    </a>
+
+                </div>
+
             </div>
-            
-            <div class="meta-info">
-                <div>📅 <strong>LAST UPDATED:</strong> August 2026</div>
-                <div>🔔 <strong>LATEST:</strong> ई-डिस्ट्रिक्ट एवं खतौनी सेवाएं लाइव</div>
-            </div>
 
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="सेवाएँ, टूल्स, फॉर्म खोजें (जैसे- e-District, Ration)...">
-            </div>
-        </div>
+            <!-- Hero Image -->
 
-        <!-- 4. Useful Govt Websites (4-Column Grid) -->
-        <div class="section-title">
-            <span>उपयोगी गवर्नमेंट वेबसाइट्स (Official Portals)</span>
-        </div>
+            <div class="hero-image">
 
-        <div class="portal-grid" id="portalGrid">
-            
-            <!-- e-District (UP) -->
-            <a href="https://edistrict.up.gov.in" target="_blank" class="grid-card" data-title="e-District (UP) आय जाति निवास प्रमाण पत्र">
-                <div class="icon-circle border-orange">
-                    <i class="fa-solid fa-file-invoice" style="color: #e67e22;"></i>
+                <div class="hero-card">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+
+                    <h3>150+ Government Services</h3>
+
+                    <p>Everything related to Panchayat & Public Services.</p>
+
                 </div>
-                <span>e-District (UP)</span>
-            </a>
 
-            <!-- CSC / Sahaj -->
-            <a href="https://digitalseva.csc.gov.in" target="_blank" class="grid-card" data-title="CSC Sahaj Seva Portal">
-                <div class="icon-circle border-yellow">
-                    <i class="fa-solid fa-laptop-code" style="color: #f1c40f;"></i>
-                </div>
-                <span>CSC / Sahaj</span>
-            </a>
-
-            <!-- Pension UP -->
-            <a href="https://sspy-up.gov.in" target="_blank" class="grid-card" data-title="Pension UP vridha vidhwa">
-                <div class="icon-circle border-blue">
-                    <i class="fa-solid fa-user-shield" style="color: #3498db;"></i>
-                </div>
-                <span>Pension (UP)</span>
-            </a>
-
-            <!-- Ration Card -->
-            <a href="https://fcs.up.gov.in" target="_blank" class="grid-card" data-title="Ration Card fcs पात्रता सूची">
-                <div class="icon-circle border-gold">
-                    <i class="fa-solid fa-wheat-awn" style="color: #d4ac0d;"></i>
-                </div>
-                <span>Ration Card</span>
-            </a>
-
-            <!-- Voter / NVSP -->
-            <a href="https://voters.eci.gov.in" target="_blank" class="grid-card" data-title="Voter ID NVSP निर्वाचन">
-                <div class="icon-circle border-indigo">
-                    <i class="fa-solid fa-id-card-clip" style="color: #5c6bc0;"></i>
-                </div>
-                <span>Voter / NVSP</span>
-            </a>
-
-            <!-- Aadhaar (UIDAI) -->
-            <a href="https://myaadhaar.uidai.gov.in" target="_blank" class="grid-card" data-title="Aadhaar UIDAI download update">
-                <div class="icon-circle border-cyan">
-                    <i class="fa-solid fa-fingerprint" style="color: #00acc1;"></i>
-                </div>
-                <span>Aadhaar (UIDAI)</span>
-            </a>
-
-            <!-- UP Bhulekh -->
-            <a href="https://upbhulekh.gov.in" target="_blank" class="grid-card" data-title="UP Bhulekh khatauni khata nakal">
-                <div class="icon-circle border-teal">
-                    <i class="fa-solid fa-map-location-dot" style="color: #00897b;"></i>
-                </div>
-                <span>UP Bhulekh</span>
-            </a>
-
-            <!-- PM-Kisan -->
-            <a href="https://pmkisan.gov.in" target="_blank" class="grid-card" data-title="PM-Kisan samman nidhi kyc">
-                <div class="icon-circle border-green">
-                    <i class="fa-solid fa-seedling" style="color: #2ecc71;"></i>
-                </div>
-                <span>PM-Kisan</span>
-            </a>
-
-            <!-- Birth / Death -->
-            <a href="https://crsorgi.gov.in" target="_blank" class="grid-card" data-title="Birth Death Certificate janam praman patra">
-                <div class="icon-circle border-navy">
-                    <i class="fa-solid fa-baby" style="color: #1e3799;"></i>
-                </div>
-                <span>Birth / Death</span>
-            </a>
-
-            <!-- UPPCL (Bijli) -->
-            <a href="https://www.upenergy.in" target="_blank" class="grid-card" data-title="UPPCL Bijli Bill payment electricity">
-                <div class="icon-circle border-purple">
-                    <i class="fa-solid fa-bolt" style="color: #8e44ad;"></i>
-                </div>
-                <span>UPPCL (Bijli)</span>
-            </a>
-
-        </div>
-
-        <!-- 5. Smart Tools Section -->
-        <div class="section-heading-box">
-            <h3>🛠️ स्मार्ट टूल्स (Smart Tools)</h3>
-            <p>दैनिक कार्य एवं ऑनलाइन यूटिलिटी टूल्स</p>
-        </div>
-
-        <div class="tools-grid">
-            <a href="#" class="tool-card">
-                <div class="tool-icon-bg bg-teal">
-                    <i class="fa-solid fa-image"></i>
-                </div>
-                <span>Image Tools</span>
-            </a>
-            <a href="#" class="tool-card">
-                <div class="tool-icon-bg bg-cyan">
+                <div class="floating-box box1">
                     <i class="fa-solid fa-file-pdf"></i>
+                    500+ PDFs
                 </div>
-                <span>PDF Tools</span>
-            </a>
-            <a href="#" class="tool-card">
-                <div class="tool-icon-bg bg-blue">
-                    <i class="fa-solid fa-file-lines"></i>
+
+                <div class="floating-box box2">
+                    <i class="fa-solid fa-toolbox"></i>
+                    25+ Smart Tools
                 </div>
-                <span>PDF Forms</span>
-            </a>
-            <a href="#" class="tool-card">
-                <div class="tool-icon-bg bg-green">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- QUICK SERVICES -->
+    <!-- ======================================== -->
+
+    <section class="services section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Explore</span>
+
+                <h2>Quick Government Services</h2>
+
+                <p>
+                    One-click access to all useful services.
+                </p>
+
+            </div>
+
+            <div class="service-grid">
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>Government Links</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>PDF Library</h3>
+                </a>
+
+                <a href="#" class="service-card">
                     <i class="fa-solid fa-calculator"></i>
-                </div>
-                <span>Fee Calculator</span>
-            </a>
-        </div>
+                    <h3>Salary Calculator</h3>
+                </a>
 
-        <!-- 6. Important Forms (Download List) -->
-        <div class="section-heading-box">
-            <h3>📄 महत्वपूर्ण फॉर्म्स (Important Forms)</h3>
-        </div>
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-image"></i>
+                    <h3>Image Tools</h3>
+                </a>
 
-        <div class="forms-container">
-            <div class="form-row">
-                <div class="pdf-tag">PDF</div>
-                <div class="form-info">
-                    <h4>परिवार रजिस्टर नकल फॉर्म</h4>
-                    <span>PDF Document</span>
-                </div>
-                <a href="#" class="download-button">Download</a>
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <h3>PDF Tools</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <h3>Letter Generator</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h3>Latest Notices</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Blogs</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>Village Profile</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-language"></i>
+                    <h3>Unicode Converter</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-qrcode"></i>
+                    <h3>QR Generator</h3>
+                </a>
+
+                <a href="#" class="service-card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Owner Dashboard</h3>
+                </a>
+
             </div>
 
-            <div class="form-row">
-                <div class="pdf-tag">PDF</div>
-                <div class="form-info">
-                    <h4>स्वघोषित प्रमाण पत्र (Self Declaration)</h4>
-                    <span>PDF Document</span>
-                </div>
-                <a href="#" class="download-button">Download</a>
-            </div>
         </div>
 
-        <!-- 7. FAQs Section -->
-        <div class="faq-section">
-            <h3 class="faq-main-title">अक्सर पूछे जाने वाले सवाल (FAQs)</h3>
-            
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>e-District प्रमाण पत्र सत्यापन (Verification) कैसे करें?</span>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>e-District पोर्टल पर जाकर 'प्रमाण पत्र सत्यापन' विकल्प चुनें और आवेदन क्रमांक व प्रमाण पत्र क्रमांक दर्ज करें।</p>
-                </div>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- STATS -->
+    <!-- ======================================== -->
+
+    <section class="stats section">
+
+        <div class="container stats-grid">
+
+            <div class="stat-card">
+                <h2>150+</h2>
+                <p>Government Services</p>
             </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>खतौनी की नकल निकालने के लिए क्या विवरण चाहिए?</span>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p>भूलेख पोर्टल पर जाकर जनपद, तहसील, ग्राम चुनें और खाता संख्या, खसरा संख्या या खातेदार के नाम से नकल देख सकते हैं।</p>
-                </div>
+            <div class="stat-card">
+                <h2>500+</h2>
+                <p>Important PDFs</p>
             </div>
+
+            <div class="stat-card">
+                <h2>25+</h2>
+                <p>Smart Tools</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>100+</h2>
+                <p>Helpful Articles</p>
+            </div>
+
         </div>
-    </div>
 
-    <footer>
-        <p>© 2026 Awadh Consultancy. All rights reserved.</p>
+    </section>
+
+    <!-- ======================================== -->
+    <!-- FEATURED PORTALS -->
+    <!-- ======================================== -->
+
+    <section class="featured section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Popular</span>
+
+                <h2>Featured Government Portals</h2>
+
+            </div>
+
+            <div class="portal-grid">
+
+                <div class="portal-card">
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <h3>eGram Swaraj</h3>
+                    <p>Rural Governance Portal.</p>
+                    <a href="#">Open Portal</a>
+                </div>
+
+                <div class="portal-card">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>PM Kisan</h3>
+                    <p>Farmer Benefit Scheme.</p>
+                    <a href="#">Open Portal</a>
+                </div>
+
+                <div class="portal-card">
+                    <i class="fa-solid fa-id-card"></i>
+                    <h3>Aadhaar Services</h3>
+                    <p>UIDAI Official Services.</p>
+                    <a href="#">Open Portal</a>
+                </div>
+
+                <div class="portal-card">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3>Gram Manchitra</h3>
+                    <p>Village GIS Mapping.</p>
+                    <a href="#">Open Portal</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- SMART TOOLS PREVIEW -->
+    <!-- ======================================== -->
+
+    <section class="tools section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Tools</span>
+
+                <h2>Popular Smart Tools</h2>
+
+            </div>
+
+            <div class="tools-grid">
+
+                <div class="tool-card">
+                    <i class="fa-solid fa-calculator"></i>
+                    <h3>Salary Calculator</h3>
+                    <p>Calculate salary instantly.</p>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fa-solid fa-image"></i>
+                    <h3>Image Compressor</h3>
+                    <p>Resize & Compress images.</p>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Merge PDF</h3>
+                    <p>Combine PDF files.</p>
+                </div>
+
+                <div class="tool-card">
+                    <i class="fa-solid fa-passport"></i>
+                    <h3>Passport Photo Maker</h3>
+                    <p>Create passport-size photo.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- PDF LIBRARY PREVIEW -->
+    <!-- ======================================== -->
+
+    <section class="pdf section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Downloads</span>
+
+                <h2>Latest PDF Documents</h2>
+
+            </div>
+
+            <div class="pdf-grid">
+
+                <div class="pdf-card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Salary Order July 2026</h3>
+                    <button>Download PDF</button>
+                </div>
+
+                <div class="pdf-card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Attendance Register Format</h3>
+                    <button>Download PDF</button>
+                </div>
+
+                <div class="pdf-card">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <h3>Village Certificate Format</h3>
+                    <button>Download PDF</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- BLOG PREVIEW -->
+    <!-- ======================================== -->
+
+    <section class="blog section">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Articles</span>
+
+                <h2>Latest Blog Posts</h2>
+
+            </div>
+
+            <div class="blog-grid">
+
+                <article class="blog-card">
+
+                    <img src="assets/images/blog/blog1.jpg" alt="Blog">
+
+                    <div class="blog-content">
+
+                        <span>Government Update</span>
+
+                        <h3>Panchayat Sahayak Salary 2026</h3>
+
+                        <a href="#">Read More →</a>
+
+                    </div>
+
+                </article>
+
+                <article class="blog-card">
+
+                    <img src="assets/images/blog/blog2.jpg" alt="Blog">
+
+                    <div class="blog-content">
+
+                        <span>Guide</span>
+
+                        <h3>How to Login eGram Swaraj Portal</h3>
+
+                        <a href="#">Read More →</a>
+
+                    </div>
+
+                </article>
+
+                <article class="blog-card">
+
+                    <img src="assets/images/blog/blog3.jpg" alt="Blog">
+
+                    <div class="blog-content">
+
+                        <span>PM Kisan</span>
+
+                        <h3>Registration Process Step by Step</h3>
+
+                        <a href="#">Read More →</a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- OWNER DASHBOARD PREVIEW -->
+    <!-- ======================================== -->
+
+    <section class="dashboard-preview section">
+
+        <div class="container dashboard-box">
+
+            <div class="dashboard-text">
+
+                <span>Owner Mode</span>
+
+                <h2>Manage Pending Works & New Tasks</h2>
+
+                <p>
+                    Add your daily pending works, latest tasks,
+                    notes and announcements without backend.
+                </p>
+
+                <a href="pages/owner-dashboard.html" class="btn primary">
+                    Open Dashboard
+                </a>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <div class="task-item">
+                    <input type="checkbox">
+                    Upload Salary PDF
+                </div>
+
+                <div class="task-item">
+                    <input type="checkbox">
+                    Add New Government Notice
+                </div>
+
+                <div class="task-item">
+                    <input type="checkbox" checked>
+                    Publish PM Kisan Blog
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- NEWSLETTER -->
+    <!-- ======================================== -->
+
+    <section class="newsletter section">
+
+        <div class="container newsletter-box">
+
+            <h2>Get Latest Government Updates</h2>
+
+            <p>
+                Stay updated with new notices, PDFs and tools.
+            </p>
+
+            <div class="newsletter-form">
+
+                <input type="email" placeholder="Enter your email">
+
+                <button>Subscribe</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ======================================== -->
+    <!-- FOOTER -->
+    <!-- ======================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <h2>GP Sahayak Pro</h2>
+
+                <p>
+                    Educational & Information Portal for Panchayat and Government Services.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="#">Home</a>
+                <a href="#">Government Links</a>
+                <a href="#">PDF Library</a>
+                <a href="#">Blog</a>
+
+            </div>
+
+            <div>
+
+                <h3>Useful Pages</h3>
+
+                <a href="#">About</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                    <a href="#"><i class="fab fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 GP Sahayak Pro • Designed by Arvind Kumar Singh
+
+        </div>
+
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scroll Top -->
+
+    <button id="scrollTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+
 </body>
-                </html>
+
+</html>
